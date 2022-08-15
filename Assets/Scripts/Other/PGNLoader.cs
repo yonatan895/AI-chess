@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,7 +33,7 @@ namespace Chess {
 		}
 
 		static Move[] MovesFromAlgebraic (string[] algebraicMoves) {
-			Board board = new Board ();
+			Board board = new();
 			board.LoadStartPosition ();
 			var moves = new List<Move> ();
 
@@ -56,13 +56,13 @@ namespace Chess {
 		}
 
 		static Move MoveFromAlgebraic (Board board, string algebraicMove) {
-			MoveGenerator moveGenerator = new MoveGenerator ();
+			MoveGenerator moveGenerator = new();
 
 			// Remove unrequired info from move string
 			algebraicMove = algebraicMove.Replace ("+", "").Replace ("#", "").Replace ("x", "").Replace ("-", "");
 			var allMoves = moveGenerator.GenerateMoves (board);
 
-			Move move = new Move ();
+			Move move = new();
 
 			foreach (Move moveToTest in allMoves) {
 				move = moveToTest;

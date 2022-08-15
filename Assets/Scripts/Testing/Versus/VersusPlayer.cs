@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -86,7 +86,7 @@ namespace Chess.Testing {
 
 				// If it's my turn to move, and haven't already begun thinking, then start now!
 				if (versusInfo.numPly == myNextMovePlyCount && !thinking) {
-					Move opponentLastMove = new Move (versusInfo.lastMove);
+					Move opponentLastMove = new(versusInfo.lastMove);
 					if (!opponentLastMove.IsInvalid) {
 						board.MakeMove (opponentLastMove);
 					}

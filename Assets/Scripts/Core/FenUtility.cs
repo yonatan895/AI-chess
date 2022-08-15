@@ -1,4 +1,4 @@
-﻿namespace Chess {
+namespace Chess {
 	using System.Collections.Generic;
 	public static class FenUtility {
 
@@ -11,7 +11,7 @@
 		// Load position from fen string
 		public static LoadedPositionInfo PositionFromFen (string fen) {
 
-			LoadedPositionInfo loadedPositionInfo = new LoadedPositionInfo ();
+			LoadedPositionInfo loadedPositionInfo = new();
 			string[] sections = fen.Split (' ');
 
 			int file = 0;

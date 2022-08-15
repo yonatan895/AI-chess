@@ -1,4 +1,4 @@
-﻿namespace Chess {
+namespace Chess {
 	using System.Collections.Generic;
 	using System.Collections;
 	using Chess.Game;
@@ -72,7 +72,7 @@
 				}
 
 				foreach (var moveInfo in bookPosition.numTimesMovePlayed) {
-					Move move = new Move (moveInfo.Key);
+					Move move = new(moveInfo.Key);
 					int numTimesPlayed = moveInfo.Value;
 					Vector2 startPos = boardUI.PositionFromCoord (BoardRepresentation.CoordFromIndex (move.StartSquare));
 					Vector2 endPos = boardUI.PositionFromCoord (BoardRepresentation.CoordFromIndex (move.TargetSquare));
@@ -97,7 +97,7 @@
 		/// Draw a 2D arrow (on xy plane)
 		void DrawArrow2D (Vector2 start, Vector2 end, float lineWidth, float headSize, Color color, bool flatHead = true, float zPos = 0) {
 			if (arrowIndex >= arrowObjects.Count) {
-				GameObject arrowObject = new GameObject ("Arrow");
+				GameObject arrowObject = new("Arrow");
 				arrowObject.transform.parent = transform;
 
 				var renderer = arrowObject.AddComponent<MeshRenderer> ();

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -156,7 +156,7 @@ namespace Chess.Game {
 			string url = baseUrl + escapedPGN;
 
 			Application.OpenURL (url);
-			TextEditor t = new TextEditor ();
+			TextEditor t = new();
 			t.text = pgn;
 			t.SelectAll ();
 			t.Copy ();
@@ -203,7 +203,7 @@ namespace Chess.Game {
 		}
 
 		Result GetGameState () {
-			MoveGenerator moveGenerator = new MoveGenerator ();
+			MoveGenerator moveGenerator = new();
 			var moves = moveGenerator.GenerateMoves (board);
 
 			// Look for mate/stalemate
