@@ -7,3 +7,6 @@ cd AI-chess/assests/scripts
 
 ./chess.exe
 
+
+Enjoy :)
+
