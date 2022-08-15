@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +20,7 @@ namespace Chess {
 
 				string entry = entries[i].Trim ();
 
-				if (entry.Contains (".") || entry == "1/2-1/2" || entry == "1-0" || entry == "0-1") {
+				if (entry.Contains ('.') || entry == "1/2-1/2" || entry == "1-0" || entry == "0-1") {
 					continue;
 				}
 
@@ -87,7 +87,7 @@ namespace Chess {
 						continue;
 					}
 					if (fileNames.IndexOf (algebraicMove[0]) == fromCoord.fileIndex) { // correct starting file
-						if (algebraicMove.Contains ("=")) { // is promotion
+						if (algebraicMove.Contains ('=')) { // is promotion
 							if (toCoord.rankIndex == 0 || toCoord.rankIndex == 7) {
 
 								if (algebraicMove.Length == 5) // pawn is capturing to promote
