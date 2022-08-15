@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using UnityEngine;
 
 public class MultiPGNParser : MonoBehaviour {
@@ -25,7 +25,7 @@ public class MultiPGNParser : MonoBehaviour {
 
 		string line;
 		while ((line = reader.ReadLine ()) != null) {
-			if (line.Contains ("[")) {
+			if (line.Contains ('[')) {
 				if (isReadingPGN) {
 					isReadingPGN = false;
 					parsedGames += currentPgn.Replace ("  ", " ").Trim () + '\n';
@@ -37,7 +37,7 @@ public class MultiPGNParser : MonoBehaviour {
 				string[] moves = line.Split (' ');
 				foreach (string move in moves) {
 					string formattedMove = move;
-					if (formattedMove.Contains (".")) {
+					if (formattedMove.Contains ('.')) {
 						formattedMove = formattedMove.Split ('.') [1];
 					}
 					currentPgn += formattedMove.Trim () + " ";

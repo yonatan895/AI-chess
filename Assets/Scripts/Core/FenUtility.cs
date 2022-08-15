@@ -1,4 +1,4 @@
-﻿namespace Chess {
+namespace Chess {
 	using System.Collections.Generic;
 	public static class FenUtility {
 
@@ -36,10 +36,10 @@
 			loadedPositionInfo.whiteToMove = (sections[1] == "w");
 
 			string castlingRights = (sections.Length > 2) ? sections[2] : "KQkq";
-			loadedPositionInfo.whiteCastleKingside = castlingRights.Contains ("K");
-			loadedPositionInfo.whiteCastleQueenside = castlingRights.Contains ("Q");
-			loadedPositionInfo.blackCastleKingside = castlingRights.Contains ("k");
-			loadedPositionInfo.blackCastleQueenside = castlingRights.Contains ("q");
+			loadedPositionInfo.whiteCastleKingside = castlingRights.Contains ('K');
+			loadedPositionInfo.whiteCastleQueenside = castlingRights.Contains ('Q');
+			loadedPositionInfo.blackCastleKingside = castlingRights.Contains ('k');
+			loadedPositionInfo.blackCastleQueenside = castlingRights.Contains ('q');
 
 			if (sections.Length > 3) {
 				string enPassantFileName = sections[3][0].ToString ();
