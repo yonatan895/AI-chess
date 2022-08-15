@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -98,7 +98,7 @@ namespace Chess {
 										continue;
 									}
 								}
-								char promotionChar = algebraicMove[algebraicMove.Length - 1];
+								char promotionChar = algebraicMove[^1];
 
 								if (move.PromotionPieceType != GetPieceTypeFromSymbol (promotionChar)) {
 									continue; // skip this move, incorrect promotion type
@@ -108,8 +108,8 @@ namespace Chess {
 							}
 						} else {
 
-							char targetFile = algebraicMove[algebraicMove.Length - 2];
-							char targetRank = algebraicMove[algebraicMove.Length - 1];
+							char targetFile = algebraicMove[^2];
+							char targetRank = algebraicMove[^1];
 
 							if (BoardRepresentation.fileNames.IndexOf (targetFile) == toCoord.fileIndex) { // correct ending file
 								if (targetRank.ToString () == (toCoord.rankIndex + 1).ToString ()) { // correct ending rank
@@ -125,8 +125,8 @@ namespace Chess {
 						continue; // skip this move, incorrect move piece type
 					}
 
-					char targetFile = algebraicMove[algebraicMove.Length - 2];
-					char targetRank = algebraicMove[algebraicMove.Length - 1];
+					char targetFile = algebraicMove[^2];
+					char targetRank = algebraicMove[^1];
 					if (BoardRepresentation.fileNames.IndexOf (targetFile) == toCoord.fileIndex) { // correct ending file
 						if (targetRank.ToString () == (toCoord.rankIndex + 1).ToString ()) { // correct ending rank
 
