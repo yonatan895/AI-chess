@@ -1,4 +1,4 @@
-﻿namespace Chess {
+namespace Chess {
 	using System.Collections.Generic;
 	using System.Collections;
 	using System.IO;
@@ -21,11 +21,11 @@
 		[ContextMenu ("Create Book")]
 		void CreateBook () {
 			var sw = System.Diagnostics.Stopwatch.StartNew ();
-			Book book = new Book ();
+			Book book = new();
 
 			var reader = new StringReader (gamesFile.text);
 			string pgn;
-			Board board = new Board ();
+			Board board = new();
 			while (!string.IsNullOrEmpty (pgn = reader.ReadLine ())) {
 
 				Move[] moves = PGNLoader.MovesFromPGN (pgn, maxPlyCount : maxPlyToRecord);
@@ -72,7 +72,7 @@
 		}
 
 		public static Book LoadBookFromFile (TextAsset bookFile) {
-			Book book = new Book ();
+			Book book = new();
 			var reader = new StringReader (bookFile.text);
 
 			string line;

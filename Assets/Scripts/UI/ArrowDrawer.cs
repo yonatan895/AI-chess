@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,7 +50,7 @@ namespace Chess.Game {
 		}
 
 		void CreateArrow (Vector2 startPos, Vector2 endPos, Color col) {
-			GameObject meshHolder = new GameObject ("Arrow");
+			GameObject meshHolder = new("Arrow");
 			meshHolder.layer = LayerMask.NameToLayer ("Arrows");
 			meshHolder.transform.parent = transform;
 			var renderer = meshHolder.AddComponent<MeshRenderer> ();

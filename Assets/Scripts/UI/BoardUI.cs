@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 namespace Chess.Game {
@@ -71,7 +71,7 @@ namespace Chess.Game {
 		public void UpdatePosition (Board board) {
 			for (int rank = 0; rank < 8; rank++) {
 				for (int file = 0; file < 8; file++) {
-					Coord coord = new Coord (file, rank);
+					Coord coord = new(file, rank);
 					int piece = board.Square[BoardRepresentation.IndexFromCoord (coord.fileIndex, coord.rankIndex)];
 					squarePieceRenderers[file, rank].sprite = pieceTheme.GetPieceSprite (piece);
 					squarePieceRenderers[file, rank].transform.position = PositionFromCoord (file, rank, pieceDepth);
@@ -128,7 +128,7 @@ namespace Chess.Game {
 					square.parent = transform;
 					square.name = BoardRepresentation.SquareNameFromCoordinate (file, rank);
 					square.position = PositionFromCoord (file, rank, 0);
-					Material squareMaterial = new Material (squareShader);
+					Material squareMaterial = new(squareShader);
 
 					squareRenderers[file, rank] = square.gameObject.GetComponent<MeshRenderer> ();
 					squareRenderers[file, rank].material = squareMaterial;

@@ -1,9 +1,9 @@
-﻿namespace Chess {
+namespace Chess {
 	public static class PGNCreator {
 
 		public static string CreatePGN (Move[] moves) {
 			string pgn = "";
-			Board board = new Board ();
+			Board board = new();
 			board.LoadStartPosition ();
 
 			for (int plyCount = 0; plyCount < moves.Length; plyCount++) {
@@ -20,14 +20,14 @@
 		}
 
 		public static string NotationFromMove (string currentFen, Move move) {
-			Board board = new Board ();
+			Board board = new();
 			board.LoadPosition (currentFen);
 			return NotationFromMove (board, move);
 		}
 
 		static string NotationFromMove (Board board, Move move) {
 
-			MoveGenerator moveGen = new MoveGenerator ();
+			MoveGenerator moveGen = new();
 
 			int movePieceType = Piece.PieceType (board.Square[move.StartSquare]);
 			int capturedPieceType = Piece.PieceType (board.Square[move.TargetSquare]);

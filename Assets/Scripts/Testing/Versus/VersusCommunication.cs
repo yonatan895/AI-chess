@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -100,14 +100,14 @@ namespace Chess.Testing {
 		}
 
 		static void Write (string data, string path) {
-			StreamWriter writer = new StreamWriter (path);
+			StreamWriter writer = new(path);
 			writer.Write (data);
 			writer.Close ();
 		}
 
 		static string Read (string path) {
 
-			StreamReader reader = new StreamReader (path);
+			StreamReader reader = new(path);
 			string data = reader.ReadToEnd ();
 			reader.Close ();
 			return data;

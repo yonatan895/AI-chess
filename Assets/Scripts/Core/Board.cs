@@ -1,4 +1,4 @@
-﻿namespace Chess {
+namespace Chess {
 	using System.Collections.Generic;
 
 	public class Board {
@@ -377,7 +377,7 @@
 			rooks = new PieceList[] { new PieceList (10), new PieceList (10) };
 			bishops = new PieceList[] { new PieceList (10), new PieceList (10) };
 			queens = new PieceList[] { new PieceList (9), new PieceList (9) };
-			PieceList emptyList = new PieceList (0);
+			PieceList emptyList = new(0);
 			allPieceLists = new PieceList[] {
 				emptyList,
 				emptyList,

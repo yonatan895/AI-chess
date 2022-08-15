@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using UnityEngine;
 
 public class MultiPGNParser : MonoBehaviour {
@@ -21,7 +21,7 @@ public class MultiPGNParser : MonoBehaviour {
 		string currentPgn = "";
 		string parsedGames = "";
 
-		StringReader reader = new StringReader (text);
+		StringReader reader = new(text);
 
 		string line;
 		while ((line = reader.ReadLine ()) != null) {

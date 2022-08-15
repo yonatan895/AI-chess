@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -99,9 +99,9 @@ namespace Chess.Game {
 			int startIndex = BoardRepresentation.IndexFromCoord (startSquare);
 			int targetIndex = BoardRepresentation.IndexFromCoord (targetSquare);
 			bool moveIsLegal = false;
-			Move chosenMove = new Move ();
+			Move chosenMove = new();
 
-			MoveGenerator moveGenerator = new MoveGenerator ();
+			MoveGenerator moveGenerator = new();
 			bool wantsKnightPromotion = Input.GetKey (KeyCode.LeftAlt);
 
 			var legalMoves = moveGenerator.GenerateMoves (board);

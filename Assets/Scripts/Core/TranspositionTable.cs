@@ -1,4 +1,4 @@
-﻿namespace Chess {
+namespace Chess {
 	// Thanks to https://web.archive.org/web/20071031100051/http://www.brucemo.com/compchess/programming/hashing.htm
 	public class TranspositionTable {
 
@@ -80,7 +80,7 @@
 			}
 			//ulong index = Index;
 			//if (depth >= entries[Index].depth) {
-			Entry entry = new Entry (board.ZobristKey, CorrectMateScoreForStorage (eval, numPlySearched), (byte) depth, (byte) evalType, move);
+			Entry entry = new(board.ZobristKey, CorrectMateScoreForStorage(eval, numPlySearched), (byte)depth, (byte)evalType, move);
 			entries[Index] = entry;
 			//}
 		}
