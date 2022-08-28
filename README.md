@@ -2,7 +2,7 @@
 git clone https://github.com/yonatan895/AI-chess
 
 
-cd AI-chess/assests/scripts
+cd AI-chess/assets/scripts
 
 
 ./chess.exe
